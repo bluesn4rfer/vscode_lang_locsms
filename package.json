@@ -1,0 +1,25 @@
+{
+    "name": "loc",
+    "displayName": "LOC",
+    "description": "LOC SMS Scripting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "loc",
+            "aliases": ["LOC SMS Scripting", "loc"],
+            "extensions": [".sql",".sqi",".sqm",".sqr",".htm",".rpt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "loc",
+            "scopeName": "source.sql",
+            "path": "./syntaxes/loc.tmLanguage.json"
+        }]
+    }
+}
