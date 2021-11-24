@@ -479,11 +479,18 @@
 							"name": "punctuation.definition.string.begin.sql"
 						},
 						"2": {
+							"patterns": [
+								{
+									"include": "#sms_scripting"
+								}
+							]							
+						},
+						"3": {
 							"name": "punctuation.definition.string.end.sql"
 						}
 					},
 					"comment": "this is faster than the next begin/end rule since sub-pattern will match till end-of-line and SQL files tend to have very long lines.",
-					"match": "(\")[^\"#]*(\")",
+					"match": "(\")([^\"#]*)(\")",
 					"name": "string.quoted.double.sql"
 				},
 				{
@@ -501,6 +508,9 @@
 					},
 					"name": "string.quoted.double.sql",
 					"patterns": [
+						{
+							"include": "#sms_scripting"
+						},
 						{
 							"include": "#string_interpolation"
 						}
