@@ -431,7 +431,10 @@
 						}
 					},
 					"name": "string.quoted.single.sql",
-					"patterns": [					
+					"patterns": [
+						{
+							"include": "#sms_scripting"
+						},
 						{
 							"include": "#string_escape"
 						}
@@ -529,11 +532,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.loc",
-					"match": "(?i)[@|®](wizinit|wizdisplay|wizmenu|wizget|wizset|wizrpl|wizclr|wizdate|wiztarget|wizexist|wizfil|wizisblank|fmt|exec|dbhot|dbexec|dbselect|dbrow|dbgen|update_batch|map_from_query|fields_from_query|map_deploy);?"
+					"match": "(?i)[@|®|©](wizreset|wizinit|wizdisplay|wizmenu|wizget|wizset|wizrpl|wizclr|wizdate|wizdetail|wiztarget|wizexist|wizfil|wizisblank|date|fmt|exec|dbhot|dbexec|dbselect|dbrow|dbgen|dbauto|dbtable|dbview|dbfind|dbcol|if|else|endif|msgtable|msgrow|msgfile|msgdel|rpt_query|rpt_detail|rptclr|rptttl|attrib|create_index|create|insert_hor|update_batch|update_view|update_report|update|map_from_query|map_from_view|map_backup|map_deploy|cmd_deploy|mac_deploy|map_addrpl|fields_from_query|map_deploy|time|now|store|ter|username|user|run|office|readkey|profile|tools|winwait|winmsg|winmail);?"
 				},
 				{
 					"name": "keyword.control.loc",
-					"match": "(?i)[@|®](d[S|J|I|D|M|Y|W|6|5|3|A|F|2|X|P|L][D|W|M|Y|C|S][D|F|\\d\\d\\d])"
+					"match": "(?i)[@|®|©](d[S|J|I|D|M|Y|W|6|5|3|A|F|2|X|P|L][D|W|M|Y|C|S][D|F|\\d\\d\\d])"
 				}
 			]
 		}		
